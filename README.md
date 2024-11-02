@@ -26,3 +26,5 @@
 ## ![个人](https://github.com/user-attachments/assets/29ebc810-4b26-47d8-8eeb-c62f3fc091a3)
 # 高保真：
 ## ![gpt4o 对话](https://github.com/user-attachments/assets/40f0a7b0-82ce-4651-8b0a-eb40392d9f23)
+## ![动作矫正](https://github.com/user-attachments/assets/e2ee9c03-95b8-4039-bff5-e74c7fb19df2)
+## ![登录](https://github.com/user-attachments/assets/3aaa2953-aeb2-474f-8ede-1e1bb66eabbf)
