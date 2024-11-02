@@ -1,0 +1,34 @@
+{
+  "hash": "3f11797b",
+  "configHash": "f6021aa3",
+  "lockfileHash": "3a803add",
+  "browserHash": "41dea23e",
+  "optimized": {
+    "@tensorflow-models/posenet": {
+      "src": "../../../../../node_modules/@tensorflow-models/posenet/dist/posenet.esm.js",
+      "file": "@tensorflow-models_posenet.js",
+      "fileHash": "afa3c6f1",
+      "needsInterop": false
+    },
+    "@tensorflow/tfjs": {
+      "src": "../../../../../node_modules/@tensorflow/tfjs/dist/index.js",
+      "file": "@tensorflow_tfjs.js",
+      "fileHash": "b109aba4",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../../../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "54d9a932",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-X4CLCTKV": {
+      "file": "chunk-X4CLCTKV.js"
+    },
+    "chunk-ZS7NZCD4": {
+      "file": "chunk-ZS7NZCD4.js"
+    }
+  }
+}

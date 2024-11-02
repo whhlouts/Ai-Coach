@@ -1,0 +1,109 @@
+{
+  "pages": [
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+	{
+	  "path": "pages/register/register",
+	  "style": {
+	    "navigationBarTitleText": "注册页面"
+	  }
+	},
+	{
+	  "path": "pages/profile/QrCodePage",
+	  "style": {
+	    "navigationBarTitleText": "我的二维码"
+	  }
+	},
+    {
+      "path": "pages/plan/plan",
+      "style": {
+        "navigationBarTitleText": "计划页面"
+      }
+    },
+	{
+	  "path": "pages/add-plan/add-plan",
+	  "style": {
+	    "navigationBarTitleText": "请添加新计划"
+	  }
+	},
+	{
+	  "path": "pages/ChatPage/ChatPage",
+	  "style": {
+	    "navigationBarTitleText": "AI助手"
+	  }
+	},
+    {
+      "path": "pages/aiCoach/aiCoach",
+      "style": {
+        "navigationBarTitleText": "AI健身教练"
+      }
+    },
+	{
+	  "path": "pages/pushups/index",
+	  "style": {
+	    "navigationBarTitleText": "俯卧撑训练"
+	  }
+	},
+	{
+	  "path": "pages/squats/index",
+	  "style": {
+	    "navigationBarTitleText": "深蹲训练"
+	  }
+	},
+	
+    {
+      "path": "pages/star/star",
+      "style": {
+        "navigationBarTitleText": "社区"
+      }
+    },
+	{
+	  "path": "pages/updateUserInfo/UpdateUserInfo",
+	  "style": {
+	    "navigationBarTitleText": "更新个人信息"
+	  }
+	},
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "个人页面"
+      }
+    }
+  ],
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/plan/plan",
+        "text": "计划",
+        "iconPath": "static/static/schedule.png",
+        "selectedIconPath": "static/static/selected_schedule.png"
+      },
+      {
+        "pagePath": "pages/aiCoach/aiCoach",
+        "text": "AI教练",
+        "iconPath": "static/static/application-ai.png",
+        "selectedIconPath": "static/static/application-ai.png"
+      },
+      {
+        "pagePath": "pages/star/star",
+        "text": "社区",
+        "iconPath": "static/static/planet.png",
+        "selectedIconPath": "static/static/selected_planet.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人",
+        "iconPath": "static/static/user.png",
+        "selectedIconPath": "static/static/selected_user.png"
+      }
+    ]
+  }
+}

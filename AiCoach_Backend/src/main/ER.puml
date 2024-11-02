@@ -1,0 +1,52 @@
+@startuml
+left to right direction
+
+actor 用户 as User
+
+rectangle "应用系统" {
+    usecase "注册账号" as UC1
+    usecase "登录账号" as UC2
+    usecase "查看个人信息" as UC3
+    usecase "修改个人信息" as UC4
+    usecase "查看二维码" as UC5
+    usecase "查看社区动态" as UC6
+    usecase "发布动态" as UC7
+    usecase "点赞动态" as UC8
+    usecase "评论动态" as UC9
+    usecase "查看日历" as UC10
+    usecase "查看自选日程" as UC11
+    usecase "查看运动偏好" as UC12
+    usecase "使用AI助手" as UC13
+    usecase "使用AI教练" as UC14
+    usecase "进行姿势矫正" as UC15
+    usecase "查看运动报告" as UC16
+
+    ' 用例扩展和包含关系
+    UC2 .u.> UC1 : <<extend>>
+    UC3 .u.> UC4 : <<include>>
+    UC5 .u.> UC3 : <<include>>
+    UC6 .u.> UC7 : <<extend>>
+    UC6 .u.> UC8 : <<extend>>
+    UC6 .u.> UC9 : <<extend>>
+    UC14 .u.> UC15 : <<include>>
+    UC14 .u.> UC16 : <<extend>>
+}
+
+User --> UC1 : 注册
+User --> UC2 : 登录
+User --> UC3 : 查看个人信息
+User --> UC4 : 修改个人信息
+User --> UC5 : 查看二维码
+User --> UC6 : 查看社区动态
+User --> UC7 : 发布动态
+User --> UC8 : 点赞动态
+User --> UC9 : 评论动态
+User --> UC10 : 查看日历
+User --> UC11 : 查看自选日程
+User --> UC12 : 查看运动偏好
+User --> UC13 : 使用AI助手
+User --> UC14 : 使用AI教练
+User --> UC15 : 进行姿势矫正
+User --> UC16 : 查看运动报告
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+rectangle "用户管理模块\n- 注册账号\n- 登录账号\n- 查看个人信息\n- 修改个人信息\n- 查看二维码" as UserManagement
+rectangle "AI助手模块\n- 使用AI助手\n- 查看运动偏好" as AIAssistant
+rectangle "AI教练模块\n- 使用AI教练\n- 进行姿势矫正\n- 查看运动报告" as AICoach
+rectangle "社区模块\n- 查看社区动态\n- 发布动态\n- 点赞动态\n- 评论动态" as Community
+rectangle "日历与日程模块\n- 查看日历\n- 查看自选日程" as Calendar
+
+UserManagement --|> AIAssistant : 交互
+UserManagement --|> AICoach : 交互
+UserManagement --|> Community : 交互
+UserManagement --|> Calendar : 交互
+AIAssistant --|> AICoach : 交互
+AIAssistant --|> Community : 交互
+AIAssistant --|> Calendar : 交互
+AICoach --|> Community : 交互
+AICoach --|> Calendar : 交互
+
+@enduml

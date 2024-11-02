@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+
+
+@startuml
+|用户访问|
+start
+:用户访问应用;
+:进入主界面;
+
+|用户管理模块|
+if (用户选择注册/登录?) then (是)
+  :系统验证凭证;
+  if (登录成功?) then (是)
+    :进入主页;
+  else (否)
+    :返回登录界面;
+    stop
+  endif
+else (否)
+  :停留在主界面;
+endif
+
+|主页操作|
+fork
+  if (用户点击AI助手?) then (是)
+    :进入与OpenAI对话界面;
+    :用户与OpenAI对话;
+    if (用户点击返回?) then (是)
+      :返回主页;
+    endif
+  else (否)
+    :查看日历、自选日程和运动偏好;
+  endif
+fork again
+  if (用户点击AI教练?) then (是)
+    :进入AI教练页面;
+    if (用户点击动作测评?) then (是)
+      :进入姿势矫正;
+    else (否)
+      :查看运动报告、运动成绩、健康报告;
+    endif
+  endif
+fork again
+  if (用户点击社区?) then (是)
+    :查看社区动态;
+    if (用户点击发布?) then (是)
+      :发布动态;
+    endif
+    :点赞/评论其他动态;
+  endif
+fork again
+  if (用户点击个人?) then (是)
+    :进入个人页面;
+    if (用户点击修改资料?) then (是)
+      :修改个人信息;
+    endif
+    if (用户点击我的二维码?) then (是)
+      :查看个人二维码;
+    endif
+  endif
+endfork
+
+stop
+@enduml
+
+

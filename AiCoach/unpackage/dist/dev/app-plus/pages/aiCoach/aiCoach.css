@@ -1,0 +1,74 @@
+
+.container {
+  padding: 1.25rem;
+  font-family: 'SimSun', 'STSong', sans-serif;
+}
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.button {
+  width: 48%;
+  padding: 0.9375rem;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.green {
+  background-color: #4CAF50;
+}
+.blue {
+  background-color: #2196F3;
+}
+.button-title {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.3125rem;
+}
+.button-subtitle {
+  color: #ffffff;
+  font-size: 0.75rem;
+}
+.report-section {
+  background-color: #f0f0f0;
+  padding: 0.9375rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.625rem;
+}
+.section-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.625rem;
+}
+.report-item {
+  margin-bottom: 0.3125rem;
+  font-size: 0.875rem;
+}
+.achievement-item {
+  margin-bottom: 0.3125rem;
+  font-size: 0.875rem;
+}
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.125rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 0.03125rem solid #e0e0e0;
+}
+.tab-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}

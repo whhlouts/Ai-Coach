@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+@startuml
+actor 用户
+participant "注册服务" as RegistrationService
+participant "登录服务" as LoginService
+participant "凭证验证服务" as CredentialValidation
+participant "主页导航" as HomeNavigation
+
+用户 -> RegistrationService : 提交注册信息
+activate RegistrationService
+RegistrationService -> CredentialValidation : 验证用户凭证
+activate CredentialValidation
+CredentialValidation --> RegistrationService : 验证成功/失败
+deactivate CredentialValidation
+RegistrationService --> 用户 : 注册成功/失败
+deactivate RegistrationService
+
+用户 -> LoginService : 提交登录信息
+activate LoginService
+LoginService -> CredentialValidation : 验证登录凭证
+activate CredentialValidation
+CredentialValidation --> LoginService : 验证成功/失败
+deactivate CredentialValidation
+LoginService -> HomeNavigation : 登录成功，导航到主页
+activate HomeNavigation
+HomeNavigation --> 用户 : 显示主页
+deactivate HomeNavigation
+deactivate LoginService
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+@startuml
+actor 用户
+participant "社区动态服务" as CommunityService
+participant "动态发布服务" as PostService
+participant "点赞评论服务" as LikeCommentService
+
+用户 -> CommunityService : 查看社区动态
+activate CommunityService
+CommunityService --> 用户 : 显示社区动态
+deactivate CommunityService
+
+用户 -> PostService : 发布动态
+activate PostService
+PostService --> 用户 : 动态发布成功
+deactivate PostService
+
+用户 -> LikeCommentService : 点赞/评论动态
+activate LikeCommentService
+LikeCommentService --> 用户 : 点赞/评论成功
+deactivate LikeCommentService
+@enduml

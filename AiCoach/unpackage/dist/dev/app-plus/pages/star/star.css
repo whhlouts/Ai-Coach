@@ -1,0 +1,130 @@
+
+.container {
+  padding: 0.625rem;
+  background-color: #f5f5f5; /* 背景颜色 */
+  height: 100vh; /* 填满整个视口 */
+}
+.title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #333; /* 标题颜色 */
+  margin-bottom: 0.625rem;
+  text-align: center; /* 标题居中 */
+}
+.new-post {
+  background-color: #ffffff; /* 发帖区域背景 */
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  margin-bottom: 0.625rem; /* 与帖子列表的间隔 */
+}
+uni-textarea {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.3125rem;
+  border: 1px solid #ccc; /* 边框颜色 */
+  border-radius: 0.125rem; /* 圆角 */
+  margin-bottom: 0.3125rem; /* 与发布按钮的间隔 */
+  resize: none; /* 禁止用户调整大小 */
+  font-size: 0.875rem; /* 字体大小 */
+}
+uni-textarea::-webkit-input-placeholder {
+  color: #aaa; /* 占位符颜色 */
+}
+uni-textarea::placeholder {
+  color: #aaa; /* 占位符颜色 */
+}
+.submit-button {
+  background-color: #4CAF50; /* 提交按钮颜色 */
+  color: #ffffff;
+  padding: 0.3125rem;
+  border-radius: 0.125rem;
+  border: none; /* 去掉边框 */
+  font-size: 0.875rem; /* 字体大小 */
+  cursor: pointer; /* 鼠标指针样式 */
+}
+.submit-button:hover {
+  background-color: #45a049; /* 鼠标悬停时改变颜色 */
+}
+.post-list {
+  margin-top: 0.3125rem; /* 与发帖区域的间隔 */
+}
+.post-item {
+  background-color: #ffffff; /* 帖子背景 */
+  padding: 0.46875rem;
+  margin-bottom: 0.3125rem; /* 帖子间隔 */
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 帖子阴影 */
+}
+.post-header {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  margin-bottom: 0.3125rem; /* 与内容的间隔 */
+}
+.post-avatar {
+  width: 1.25rem; /* 头像大小 */
+  height: 1.25rem; /* 头像大小 */
+  border-radius: 0.625rem; /* 圆形头像 */
+  margin-right: 0.3125rem; /* 头像与文本的间隔 */
+}
+.post-info {
+  flex: 1; /* 填充剩余空间 */
+}
+.post-author {
+  font-size: 0.9375rem; /* 作者字体大小 */
+  font-weight: bold; /* 加粗 */
+}
+.post-time {
+  font-size: 0.75rem; /* 时间字体大小 */
+  color: #888; /* 时间颜色 */
+}
+.post-content {
+  font-size: 0.875rem; /* 内容字体大小 */
+  line-height: 1.5; /* 行间距 */
+  margin-bottom: 0.3125rem; /* 与动作按钮的间隔 */
+}
+.post-actions {
+  display: flex;
+  justify-content: space-between; /* 左右对齐 */
+}
+.like-button,
+.comment-button {
+  background: none; /* 透明背景 */
+  color: #4CAF50; /* 按钮文字颜色 */
+  font-size: 0.8125rem; /* 字体大小 */
+  cursor: pointer; /* 鼠标指针样式 */
+}
+.like-button:hover,
+.comment-button:hover {
+  text-decoration: underline; /* 悬停时添加下划线 */
+}
+.comments-section {
+  margin-top: 0.3125rem; /* 与帖子内容的间隔 */
+  padding-left: 0.3125rem; /* 左侧填充 */
+}
+.comment {
+  font-size: 0.8125rem; /* 评论字体大小 */
+  margin-bottom: 0.15625rem; /* 评论间隔 */
+}
+.comment-author {
+  font-weight: bold; /* 评论作者加粗 */
+}
+.new-comment {
+  display: flex; /* 评论输入框和按钮水平排列 */
+  margin-top: 0.3125rem; /* 与已有评论的间隔 */
+}
+.comment-input {
+  flex: 1; /* 填充剩余空间 */
+  padding: 0.3125rem;
+  border: 1px solid #ccc; /* 边框颜色 */
+  border-radius: 0.125rem; /* 圆角 */
+}
+.submit-comment {
+  background-color: #4CAF50; /* 提交按钮颜色 */
+  color: #ffffff;
+  padding: 0.3125rem;
+  border-radius: 0.125rem;
+  border: none; /* 去掉边框 */
+  font-size: 0.8125rem; /* 字体大小 */
+  cursor: pointer; /* 鼠标指针样式 */
+}

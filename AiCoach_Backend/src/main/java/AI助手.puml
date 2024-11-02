@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+@startuml
+actor 用户
+participant "AI助手界面" as AIAssistantUI
+participant "OpenAI接口" as OpenAI
+participant "主页导航" as HomeNavigation
+
+用户 -> AIAssistantUI : 发送消息
+activate AIAssistantUI
+AIAssistantUI -> OpenAI : 调用OpenAI API
+activate OpenAI
+OpenAI --> AIAssistantUI : 返回对话结果
+deactivate OpenAI
+AIAssistantUI --> 用户 : 显示对话结果
+deactivate AIAssistantUI
+
+用户 -> AIAssistantUI : 点击返回主页
+activate AIAssistantUI
+AIAssistantUI -> HomeNavigation : 导航到主页
+activate HomeNavigation
+HomeNavigation --> 用户 : 显示主页
+deactivate HomeNavigation
+deactivate AIAssistantUI
+@enduml

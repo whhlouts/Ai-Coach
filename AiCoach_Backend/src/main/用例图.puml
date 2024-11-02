@@ -1,0 +1,80 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+@startuml
+actor 用户
+participant "主界面" as MainScreen
+participant "注册服务" as RegistrationService
+participant "登录服务" as LoginService
+participant "凭证验证服务" as CredentialValidation
+participant "主页" as Home
+participant "AI助手界面" as AIAssistantUI
+participant "OpenAI接口" as OpenAI
+participant "日历服务" as CalendarService
+participant "日程服务" as ScheduleService
+participant "运动偏好服务" as FitnessPreferenceService
+participant "AI教练界面" as AICoachUI
+participant "姿势矫正服务" as PostureCorrection
+participant "报告服务" as ReportService
+participant "社区动态服务" as CommunityService
+participant "动态发布服务" as PostService
+participant "点赞评论服务" as LikeCommentService
+participant "个人页面服务" as PersonalPageService
+participant "信息修改服务" as InfoModificationService
+participant "二维码服务" as QRCodeService
+
+== 用户访问应用 ==
+用户 -> MainScreen : 打开应用
+MainScreen --> 用户 : 显示主界面
+
+== 用户管理模块 ==
+用户 -> RegistrationService : 选择注册/登录
+RegistrationService -> CredentialValidation : 验证凭证
+CredentialValidation --> RegistrationService : 验证成功/失败
+RegistrationService --> 用户 : 注册/登录成功
+
+== 进入主页 ==
+用户 -> Home : 进入主页
+Home --> 用户 : 显示主页
+
+== AI助手模块 ==
+用户 -> AIAssistantUI : 点击AI助手
+AIAssistantUI -> OpenAI : 调用OpenAI接口
+OpenAI --> AIAssistantUI : 返回对话结果
+AIAssistantUI --> 用户 : 显示对话结果
+用户 -> AIAssistantUI : 点击返回主页
+AIAssistantUI -> Home : 返回主页
+Home --> 用户 : 显示主页
+
+== 日历与日程模块 ==
+用户 -> CalendarService : 查看日历
+CalendarService --> 用户 : 显示日历
+用户 -> ScheduleService : 查看自选日程
+ScheduleService --> 用户 : 显示日程
+用户 -> FitnessPreferenceService : 查看运动偏好
+FitnessPreferenceService --> 用户 : 显示运动偏好
+
+== AI教练模块 ==
+用户 -> AICoachUI : 点击AI教练
+AICoachUI --> 用户 : 显示AI教练界面
+用户 -> PostureCorrection : 点击动作测评
+PostureCorrection --> 用户 : 显示矫正建议
+用户 -> ReportService : 查看运动报告、运动成绩、健康报告
+ReportService --> 用户 : 显示报告
+
+== 社区模块 ==
+用户 -> CommunityService : 查看社区动态
+CommunityService --> 用户 : 显示动态
+用户 -> PostService : 发布动态
+PostService --> 用户 : 动态发布成功
+用户 -> LikeCommentService : 点赞/评论动态
+LikeCommentService --> 用户 : 点赞/评论成功
+
+== 个人模块 ==
+用户 -> PersonalPageService : 进入个人页面
+PersonalPageService --> 用户 : 显示个人页面
+用户 -> InfoModificationService : 点击修改个人信息
+InfoModificationService --> 用户 : 信息修改成功
+用户 -> QRCodeService : 点击查看个人二维码
+QRCodeService --> 用户 : 显示二维码
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+@startuml
+actor 用户
+participant "AI教练界面" as AICoachUI
+participant "姿势矫正服务" as PostureCorrection
+participant "报告服务" as ReportService
+
+用户 -> AICoachUI : 进入AI教练页面
+activate AICoachUI
+AICoachUI --> 用户 : 显示AI教练界面
+deactivate AICoachUI
+
+用户 -> PostureCorrection : 进行动作测评
+activate PostureCorrection
+PostureCorrection --> 用户 : 显示矫正建议
+deactivate PostureCorrection
+
+用户 -> ReportService : 查看运动报告、运动成绩、健康报告
+activate ReportService
+ReportService --> 用户 : 显示相关报告
+deactivate ReportService
+@enduml

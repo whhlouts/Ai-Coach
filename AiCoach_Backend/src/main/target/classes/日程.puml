@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+@startuml
+actor 用户
+participant "日历服务" as CalendarService
+participant "日程服务" as ScheduleService
+participant "运动偏好服务" as FitnessPreferenceService
+
+用户 -> CalendarService : 查看日历
+activate CalendarService
+CalendarService --> 用户 : 显示日历
+deactivate CalendarService
+
+用户 -> ScheduleService : 查看自选日程
+activate ScheduleService
+ScheduleService --> 用户 : 显示日程
+deactivate ScheduleService
+
+用户 -> FitnessPreferenceService : 查看运动偏好
+activate FitnessPreferenceService
+FitnessPreferenceService --> 用户 : 显示运动偏好
+deactivate FitnessPreferenceService
+@enduml

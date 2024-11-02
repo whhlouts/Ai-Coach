@@ -1,0 +1,58 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+@startuml
+actor User
+participant "应用" as App
+participant "AI助手" as AIAssistant
+participant "AI教练" as AICoach
+participant "社区" as Community
+participant "个人中心" as Profile
+
+User -> App : 打开应用
+App -> User : 显示主界面
+
+User -> App : 注册/登录
+alt 注册新账号
+    App -> User : 提供注册界面
+else 登录已有账号
+    App -> User : 提供登录界面
+    User -> App : 输入用户名和密码
+    App -> User : 验证凭证
+    User -> App : 登录成功
+end
+App -> User : 进入主页
+
+User -> AIAssistant : 点击AI助手
+AIAssistant -> User : 进入对话界面
+User -> AIAssistant : 点击返回按钮
+AIAssistant -> User : 返回主页
+
+User -> App : 查看日历/自选日程/运动偏好
+
+User -> AICoach : 点击AI教练
+AICoach -> User : 进入AI教练页面
+
+alt 点击动作测评
+    User -> AICoach : 选择动作测评
+    AICoach -> User : 进入姿势矫正
+else 不点击动作测评
+    AICoach -> User : 查看运动报告/成绩/健康报告
+end
+
+User -> Community : 点击社区
+Community -> User : 进入社区动态
+User -> Community : 输入内容并点击发布
+Community -> User : 发布动态
+User -> Community : 点赞/评论其他动态
+
+User -> Profile : 点击个人
+Profile -> User : 进入个人页面
+alt 点击修改资料
+    User -> Profile : 修改个人信息
+    Profile -> User : 更新资料
+else 点击我的二维码
+    Profile -> User : 显示个人二维码
+end
+
+@enduml

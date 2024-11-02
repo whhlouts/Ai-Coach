@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+@startuml
+actor 用户
+participant "个人页面服务" as PersonalPageService
+participant "信息修改服务" as InfoModificationService
+participant "二维码服务" as QRCodeService
+
+用户 -> PersonalPageService : 进入个人页面
+activate PersonalPageService
+PersonalPageService --> 用户 : 显示个人页面
+deactivate PersonalPageService
+
+用户 -> InfoModificationService : 修改个人信息
+activate InfoModificationService
+InfoModificationService --> 用户 : 信息修改成功
+deactivate InfoModificationService
+
+用户 -> QRCodeService : 查看个人二维码
+activate QRCodeService
+QRCodeService --> 用户 : 显示二维码
+deactivate QRCodeService
+@enduml
