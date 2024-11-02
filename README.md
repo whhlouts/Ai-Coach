@@ -18,5 +18,11 @@
 ## ![E-R图](https://github.com/user-attachments/assets/4b703c9e-ef00-42d8-8d18-ecdc2bf456d4)
 # 系统详细设计：
 ## 不同模块的时序图如下：
-## 
-# ![gpt4o 对话](https://github.com/user-attachments/assets/40f0a7b0-82ce-4651-8b0a-eb40392d9f23)
+## ![登录注册](https://github.com/user-attachments/assets/fc44122f-4b08-4e43-b31d-bcdf0374abbb)
+## ![GPT4o对话](https://github.com/user-attachments/assets/e75ec4ed-f078-4011-9c90-35ee595adfc7)
+## ![日历](https://github.com/user-attachments/assets/99b872c5-4cd3-411e-9cf6-179d55a3c593)
+## ![姿势矫正](https://github.com/user-attachments/assets/73ab7d98-6238-43f8-97c4-2ffd7a287bf8)
+## ![社区](https://github.com/user-attachments/assets/f6251c0a-4fff-4a5c-8840-e40cc46928c8)
+## ![个人](https://github.com/user-attachments/assets/29ebc810-4b26-47d8-8eeb-c62f3fc091a3)
+# 高保真：
+## ![gpt4o 对话](https://github.com/user-attachments/assets/40f0a7b0-82ce-4651-8b0a-eb40392d9f23)
